@@ -2,42 +2,131 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    transition: 1s;
 }
+
+.ex-1-square:hover {
+    background-color: red;
+}
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 2s;
 }
+
+.ex-2-square:active {
+    width: 100%;
+}
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 1s;
 }
+
+.ex-3-square:hover {
+    border-radius: 50%;
+}
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 1s;
 }
+
+.ex-4-square:hover {
+    opacity: 0;
+}
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: 1s;
 }
+
+.ex-5-square:hover {
+    transform: scale(2);
+}
+
+.ex-5-square:active {
+    transform: scale(.5);
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(1);
+}
+
+.ex-7-img {
+    transition: 2s;
+}
+
+.ex-7-img:hover {
+    filter: grayscale(1) sepia(1);
+}
+
+.ex-8-img {
+    transition: 2s;
+}
+
+.ex-8-img:hover {
+    filter: grayscale(1) sepia(.2);
+    border-radius: 20%;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 1s;
 }
+
+.ex-9-img:hover {
+    border-radius: 20%;
+    transform: scale(1.5);
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation: rotate 3s linear infinite;
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(1turn);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: rotate2 3s linear;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(300deg)
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -51,6 +140,43 @@
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: topwhite 1s linear;
+}
+
+@keyframes topwhite {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: 90%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: bottomwhite 1s linear;
+}
+
+@keyframes bottomwhite {
+    0% {
+        right: 10%;
+    }
+
+    50% {
+        right: 90%;
+    }
+
+    100% {
+        right: 10%;
+    }
+}
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -66,4 +192,78 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: ex13 1s linear;
+}
+
+@keyframes ex13 {
+    0% {
+        left: 10%;
+        top: -10%;
+    }
+
+    25% {
+        left: calc(70%);
+        top: -10%;
+    }
+
+    50% {
+        left: calc(70%);
+        top: 100%;
+    }
+
+    70% {
+        left: 0;
+        top: 100%;
+    }
+    
+    85% {
+        left: -15%;
+        top: -10%;
+    }
+
+    100% {
+        left: 10%;
+        top: -10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: ex132 1s linear;
+}
+
+@keyframes ex132 {
+    0% {
+        right: 10%;
+        bottom: -10%;
+    }
+        
+     25% {
+         right: calc(70%);
+        bottom: -10%;
+     }
+        
+     50% {
+        right: calc(70%);
+        bottom: 100%;
+    }
+        
+    70% {
+        right: 0;
+        bottom: 100%;
+    }
+            
+     85% {
+        right: -15%;
+        bottom: -10%;
+    }
+        
+     100% {
+        right: 10%;
+        bottom: -10%;
+    }
+
 }
